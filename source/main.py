@@ -47,23 +47,6 @@ def obtener_contenido_archivo_desde_github(url):
         return None
     
 
-# Se genera el código del test, se guarda en un archivo temporal y luego se ejecuta ese archivo dentro de la aplicación Streamlit, mostrando los resultados en la interfaz
-"""def ejecutar_test(codigo_test):
-    # Guardar el código del test en un archivo temporal
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".py") as temp_file:
-        temp_file.write(codigo_test.encode('utf-8'))
-        temp_file.flush()
-        
-        # Ejecutar el archivo de test y capturar la salida
-        resultado = subprocess.run(['python', temp_file.name], capture_output=True, text=True)
-        return resultado.stdout, resultado.stderr
-
-
-def dividir_tests_en_funciones(codigo_test):
-    funciones = codigo_test.split("def ")
-    funciones = ["def " + f for f in funciones if f.strip()]
-    return funciones
-"""
 
 
 def main():
@@ -129,16 +112,7 @@ def main():
                         mime='text/plain'
                     )
 
-                # Botón para ejecutar el test
-                """ if st.button('Ejecutar test unitario'):
-                    with st.spinner('Ejecutando test unitario...'):
-                        salida, error = ejecutar_test(test_unitario)
-                        st.write('Resultado de la ejecución del test:')
-                        if salida:
-                            st.text_area('Salida', salida, height=200)
-                        if error:
-                            st.text_area('Error', error, height=200, text_color="red")
-                """
+               
 
 if __name__ == "__main__":
     main()
