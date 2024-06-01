@@ -14,6 +14,12 @@ api_key = os.environ.get('OPENAI_API_KEY')
 
 openai.api_key = api_key
 
+# Crear una fila para los logos en la esquina superior izquierda
+col1, col2, col3 = st.columns([1, 6, 1])
+with col1:
+    st.image('soprasteria_logo.jpg', width=100)
+with col3:
+    st.image('unir_universidad_internet_logo.jpg', width=100)
 
 # Título de la aplicación
 st.title('Generador de tests unitarios mediante IA Generativa')
