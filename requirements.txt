@@ -3,3 +3,6 @@ openai==0.28
 requests
 python-dotenv
 pytest
+sklearn
+importlib
+pandas
