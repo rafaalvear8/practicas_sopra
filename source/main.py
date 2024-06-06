@@ -74,7 +74,7 @@ def ejecutar_tests(tests_openai, test_framework):
         # Ejecutar pytest
         result = pytest.main(["test_temp.py"])
         if result == 0:
-            st.info("¡Enhorabuena! Tras una nueva consulta, los tests se han generado correctamente y han sido ejecutados con éxito sobre tu código.")
+            st.info("¡Enhorabuena! Los tests se han generado correctamente y han sido ejecutados con éxito sobre tu código.")
         else:
             st.error("Algunos tests fallaron, pero no se puede acceder a los errores con pytest para devolverlos a la api")
 
