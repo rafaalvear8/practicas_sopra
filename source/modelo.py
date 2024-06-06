@@ -28,4 +28,4 @@ def entrenar_evaluar_clasificador():
 
 if __name__ == "__main__":
     accuracy = entrenar_evaluar_clasificador()
-    print("Precisión del clasificador:", accuracy)
+    print("Precision del clasificador:", accuracy)
