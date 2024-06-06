@@ -288,16 +288,14 @@ def main():
                         st.code(tests_openai, language="python")
                         contenido_y_tests = ejecutar_contenido(contenido, tests_openai)
                         ejecutar_tests(contenido_y_tests, test_framework)
-
-                         #Esto todavía falla
-                        #ejecucion_tests =  exec(tests_openai) #Esto todavía falla
-                        #st.warning(ejecucion_tests)
+                        
+                        # Botón de descarga usando la función importada
+                        descargar_archivo_contenido('test_unitario_generado.py', tests_openai)
                     else:
                         st.error("No se pudo obtener el contenido del archivo. Verifica los detalles del repositorio y la ruta del archivo.")
                 else:
                     st.warning("Por favor, ingresa todos los detalles del repositorio y la ruta del archivo.")
-                # Botón de descarga usando la función importada
-                descargar_archivo_contenido('test_unitario_generado.py', test_unitario)
+                
                     
 
     with tab2:
@@ -321,7 +319,6 @@ def main():
                     st.code(test_unitario, language="python")
                     contenido_y_tests = ejecutar_contenido(code, test_unitario)
                     ejecutar_tests(contenido_y_tests, test_framework)
-                    
 
                     # Botón de descarga usando la función importada
                     descargar_archivo_contenido('test_unitario_generado.py', test_unitario)
