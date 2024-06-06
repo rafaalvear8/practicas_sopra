@@ -250,7 +250,8 @@ def ejecutar_contenido(contenido, tests_openai):
         except Exception as e:
             st.error(f"Error al ejecutar el código del que dependen los tests: {e}")
     except Exception as e:
-        st.error(f"Los test se han generado correctamente, pero ha fallado la ejecución del test con el siguiente error: \n{e} \nSe va a realizar una nueva consulta para corrregirlo.")
+        st.error(f"Los test se han generado correctamente, pero ha fallado la ejecución del test con el siguiente error: \n{e}")
+        st.error("Se va a realizar una nueva consulta para corrregirlo.")
         try:
             contenido = test.get_contenido_error(contenido, e.args[0])
             contenido = eliminar_caracteres_innecesarios(contenido)
