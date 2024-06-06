@@ -131,7 +131,7 @@ def ejecutar_tests(tests_openai, test_framework):
         # Ejecutar pytest
         result = pytest.main(["test_temp.py"])
         if result == 0:
-            st.info("¡Enhorabuena! Los tests se han generado correctamente y han sido ejecutados con éxito sobre tu código.")
+            st.success("¡Enhorabuena! Los tests se han generado correctamente y han sido ejecutados con éxito sobre tu código.")
         else:
             st.error("Algunos tests fallaron, pero no se puede acceder a los errores con pytest para devolverlos a la api")
 
@@ -156,7 +156,7 @@ def ejecutar_tests(tests_openai, test_framework):
         
         # Mostrar el resultado en Streamlit
         if result.wasSuccessful():
-            st.info("Los tests se han ejecutado correctamente")
+            st.success("¡Enhorabuena! Los tests se han generado correctamente y han sido ejecutados con éxito sobre tu código.")
         else:
             st.error("Algunos tests fallaron, vamos a pasarle el código a la API a ver si puede corregirlo")
             for error in result.errors:
