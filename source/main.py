@@ -49,7 +49,7 @@ def eliminar_caracteres_innecesarios(codigo):
     codigo = codigo.replace("```", "")
     codigo = codigo.replace("python", "")
     lineas = codigo.split('\n')
-    lineas = [linea for linea in lineas if not (linea.startswith('from my_module import') or linea.startswith('from mi_modulo import') or linea.startswith('from your_module import') or linea.startswith('from my_code import') or linea.startswith('from mycode import'))]
+    lineas = [linea for linea in lineas if not (linea.startswith('from my_module import') or linea.startswith('from original_code') or linea.startswith('from mi_modulo import') or linea.startswith('from your_module import') or linea.startswith('from my_code import') or linea.startswith('from mycode import'))]
     codigo_sin_import = '\n'.join(lineas)
     return codigo_sin_import
 
